@@ -16,7 +16,18 @@
     <div class="container">
         <img src="media/Logo%20Mid-Square.svg" alt="Mid-Logo">
         <p><i>Explore</i> Southern Luzon State University with us!</p>
-        <a href="home.html"><button>GET STARTED</button></a>
+        <a href="home.html" id="homelink"><button>GET STARTED</button></a>
     </div>
+
+    <script>
+        // Set a flag in sessionStorage to indicate the landing page has been visited
+        sessionStorage.setItem('landingPageVisited', 'true');
+
+        // Add an event listener to the link
+        document.getElementById('homeLink').addEventListener('click', function (e) {
+            // Push the homepage state into the history stack
+            history.pushState(null, '', 'home.html');
+        });
+    </script>
 </body>
 </html>
