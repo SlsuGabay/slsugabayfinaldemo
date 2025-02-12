@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color:#4d7111;
+    --secondary-color:#c3e956;
+    --tertiary-color:#91eaaf;
+    --light-color:#f4fffc;
+    --dark-color:#1f4b2c;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(45deg, rgb(31, 75, 44, 0.5), rgb(77, 113, 17, 0.5), rgb(195, 233, 86, 0.5), rgb(145, 234, 175, 0.5)), url("/media/home_page_slider2-copy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.container img {
+    width: 10rem;
+    height: auto;
+}
+
+.container p{
+    margin-bottom: 300px;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.container a button {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--light-color);
+    background-image: linear-gradient(45deg, var(--primary-color), var(--dark-color));
+    border-style: none;
+    padding: 15px 90px;
+    border-radius: 20px;
+    transition: ease 0.4s;
+    letter-spacing: 2px;
+}
+
+.container button:hover {
+    color: var(--dark-color);
+    background: var(--light-color);
+    letter-spacing: 5px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .container {
+        width: 100%;
+    }
+}

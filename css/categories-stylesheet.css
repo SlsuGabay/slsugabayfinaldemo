@@ -1,0 +1,44 @@
+.visit-container{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.visit-container p{
+    font-size: 1.7rem;
+}
+
+.visit-container .places{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.visit-container .place {
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 30px;
+    background: #fbfffe;
+    height: 250px;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.place img {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    height: 160px;
+    width: 93%;
+    object-fit: cover;
+}
+
+.place a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 18px;
+    margin-left: 10px;
+}
