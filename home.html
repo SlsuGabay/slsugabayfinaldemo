@@ -126,6 +126,26 @@
         </div>
     </div>
 
+    <script>
+        // Check if the landing page has been visited
+        if (sessionStorage.getItem('landingPageVisited')) {
+            // Replace the current history entry with the homepage
+            history.replaceState(null, document.title, window.location.href);
+
+            // Optional: Clear the flag if you don't need it anymore
+            sessionStorage.removeItem('landingPageVisited');
+        }
+
+        // Prevent navigating back to the landing page
+        window.addEventListener('popstate', function (e) {
+            // If the user tries to go back, push the homepage state again
+            history.pushState(null, '', 'home.html');
+        });
+
+        // Push the homepage state into the history stack when the page loads
+        history.pushState(null, '', 'home.html');
+    </script>
+
 
 </body>
 </html>
