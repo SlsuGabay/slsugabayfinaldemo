@@ -1,0 +1,21 @@
+.notif-container {
+    padding: 30px;
+    margin-bottom: 70px;
+}
+
+.notification {
+    padding: 10px;
+}
+
+.notif-info {
+    padding-bottom: 19px;
+    border-bottom: solid var(--dark-color) 1px;
+    margin-bottom: 30px;
+}
+
+.notif-info b {
+    color: var(--light-color);
+    border-radius: 25px;
+    padding: 5px 15px;
+    background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--dark-color));
+}
