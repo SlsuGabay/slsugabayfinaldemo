@@ -87,24 +87,6 @@
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 3000); // Change image every 2 seconds
         }
-
-        // Check if the landing page has been visited
-        if (sessionStorage.getItem('landingPageVisited')) {
-            // Replace the current history entry with the homepage
-            history.replaceState(null, document.title, window.location.href);
-
-            // Optional: Clear the flag if you don't need it anymore
-            sessionStorage.removeItem('landingPageVisited');
-        }
-
-        // Prevent navigating back to the landing page
-        window.addEventListener('popstate', function (e) {
-            // If the user tries to go back, push the homepage state again
-            history.pushState(null, '', 'home.html');
-        });
-
-        // Push the homepage state into the history stack when the page loads
-        history.pushState(null, '', 'home.html');
     </script>
     <!--------SLIDESHOW----------->
 
@@ -115,20 +97,20 @@
     <div class="categories-container">
         <div class="categ"><a href="categories.html"><img src="media/Offices.svg">&nbsp;Offices</a></div>
         <div class="categ"><a href="categories.html"><img src="media/Colleges-Icon.svg">&nbsp;Colleges</a></div>
-        <div class="categ"><a href="categories.html"><img src="media/Facilities.svg">&nbsp;Facilities</a></div>
-        <div class="categ"><a href="categories.html"><img src="media/PWD-Access.svg">&nbsp;PWD Access</a></div>
+        <div class="categ"><a href="CATEG-facilities.html"><img src="media/Facilities.svg">&nbsp;Facilities</a></div>
+        <div class="categ"><a href="CATEG-pwd.html"><img src="media/PWD-Access.svg">&nbsp;PWD Access</a></div>
     </div>
     <div class="visit-container">
         <p>Most Visited</p>
         <div class="places">
-            <div class="place"><img src="media/Library%202.jpg"><a href="#">Library</a></div>
-            <div class="place"><img src="media/Gomburza%20Admin%20Side.jpg"><a href="#">Registrar</a></div>
-            <div class="place"><img src="media/Covered%20Cout.jpg"><a href="#">Covered Court</a></div>
-            <div class="place"><img src="media/Gymnasium%20Labas.jpg"><a href="#">Gymnasium</a></div>
-            <div class="place"><img src="media/Chappel.jpg"><a href="#">Catholic Chappel</a></div>
-            <div class="place"><img src="media/Admin%20Building.png"><a href="#">Admin Building</a></div>
-            <div class="place"><img src="media/Hermano%20Puli%20Shrine.jpg"><a href="#">HP Shrine</a></div>
-            <div class="place"><img src="media/Hermano%20Puli.jpg"><a href="#">HP Building</a></div>
+            <div class="place"><img src="media/Library%202.jpg"><a href="CATEG-Library.html">Library</a></div>
+            <div class="place"><img src="media/Gomburza%20Admin%20Side.jpg"><a href="CATEG-gomburza.html">Registrar</a></div>
+            <div class="place"><img src="media/Covered%20Cout.jpg"><a href="f-cvc.html">Covered Court</a></div>
+            <div class="place"><img src="media/Gymnasium%20Labas.jpg"><a href="f-gym.html">Gymnasium</a></div>
+            <div class="place"><img src="media/Chappel.jpg"><a href="f-cha.html">Catholic Chapel</a></div>
+            <div class="place"><img src="media/Admin%20Building.png"><a href="CATEG-admin.html">Admin Building</a></div>
+            <div class="place"><img src="media/Hermano%20Puli%20Shrine.jpg"><a href="f-hpsp.html">HP Shrine</a></div>
+            <div class="place"><img src="media/Hermano%20Puli.jpg"><a href="CATEG-hp.html">HP Building</a></div>
             <div class="place" style="background-color: var(--light-color); box-shadow: none"><a href="#"></a></div>
             <div class="place" style="background-color: var(--light-color); box-shadow: none"><a href="#"></a></div>
         </div>
@@ -143,5 +125,7 @@
             <a href="about-us.html" class="material-symbols-rounded">group</a>
         </div>
     </div>
+
+
 </body>
 </html>
